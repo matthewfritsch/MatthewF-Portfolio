@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Fritsch - Backend Software Engineer</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon">🌙</span>
+        </button>
+        <div class="nav-links">
+            <a href="https://www.linkedin.com/in/matthew-fritsch-9ba95b195/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/matthewfritsch" target="_blank">GitHub</a>
+            <a href="mailto:contact@matthewfritsch.com">Email</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <img src="./assets/matthewfritsch.png" alt="Matthew Fritsch" class="profile-img">
+            <div class="hero-text">
+                <h1>Matthew Fritsch</h1>
+                <h2>Backend Software Engineer</h2>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>I'm Currently Learning</h3>
+                    <div class="card-content">
+                        <div class="item">
+                            <span class="badge opengl">OpenGL</span>
+                            <span>Graphics Programming</span>
+                        </div>
+                        <div class="item">
+                            <span class="badge django">Django</span>
+                            <span>Python Web Apps</span>
+                        </div>
+                        <div class="item">
+                            <span class="badge rust">Rust</span>
+                            <span>Fundamentals in Rust, Go</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>My Skills Include</h3>
+                    <div class="card-content">
+                        <div class="item">
+                            <span class="badge programming">Programming</span>
+                            <span>Python, C++, Bash</span>
+                        </div>
+                        <div class="item">
+                            <span class="badge technologies">Technologies</span>
+                            <span>Ubuntu, git, Docker, ROS</span>
+                        </div>
+                        <div class="item">
+                            <span class="badge tools">Tools</span>
+                            <span>Vim, VSCode, GCC Compilers, SSH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>A Few Of My Hobbies Are</h3>
+                    <div class="card-content">
+                        <div class="item">
+                            <span class="badge motorcycle">Motorcycle</span>
+                            <span>Streaming Motorcycle Rides</span>
+                        </div>
+                        <div class="item">
+                            <span class="badge climbing">Climbing</span>
+                            <span>Rock climbing (learning V4 routes)</span>
+                        </div>
+                        <div class="item">
+                            <span class="badge travelling">Travelling</span>
+                            <span>Planning to visit Germany</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <div class="card contact-card">
+                <p>Send me an email at <a href="mailto:contact@matthewfritsch.com">contact@matthewfritsch.com</a></p>
+                <p>My current local time is <span id="time"></span>.</p>
+                <p>I'll return your email <span id="response-time"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
