@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}} — Matthew Fritsch</title>
+    <link rel="icon" type="image/png" href="{{.RelativeRoot}}assets/favicon.png">
+    <link rel="stylesheet" href="{{.RelativeRoot}}style.css">
+    <link rel="stylesheet" href="{{.RelativeRoot}}blog.css">
+    <link rel="stylesheet" href="{{.RelativeRoot}}syntax.css">
+    <link rel="stylesheet" href="{{.RelativeRoot}}syntax-light.css">
+</head>
+<body>
+    <nav>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon">🌙</span>
+        </button>
+        <div class="nav-links">
+            <a href="{{.RelativeRoot}}blog/">Blog</a>
+            <a href="https://www.linkedin.com/in/matthew-fritsch-9ba95b195/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/matthewfritsch" target="_blank">GitHub</a>
+            <a href="mailto:contact@matthewfritsch.com">Email</a>
+        </div>
+    </nav>
+    <main>
+        <article class="prose">
+            <h1>{{.Title}}</h1>
+            <time>{{.DateFormatted}}</time>
+            {{.Content}}
+        </article>
+    </main>
+    <script src="{{.RelativeRoot}}script.js"></script>
+</body>
+</html>
