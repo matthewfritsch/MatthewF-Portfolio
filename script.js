@@ -17,6 +17,10 @@ themeToggle.addEventListener('click', () => {
 
 // Time display
 function updateTime() {
+    const timeEl = document.getElementById('time');
+    const responseEl = document.getElementById('response-time');
+    if (!timeEl || !responseEl) return;
+
     const date = new Date();
     const time = new Intl.DateTimeFormat('en-US', {
         hour: '2-digit',
@@ -25,11 +29,11 @@ function updateTime() {
         hour12: true
     }).format(date);
     
-    document.getElementById('time').textContent = time;
+    timeEl.textContent = time;
     
     const hour = new Date(date.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })).getHours();
     const responseTime = (hour > 20 || hour < 9) ? 'as soon as I can.' : 'shortly.';
-    document.getElementById('response-time').textContent = responseTime;
+    responseEl.textContent = responseTime;
 }
 
 updateTime();
