@@ -38,3 +38,42 @@ Your site will be live at `https://yourusername.github.io/yourrepo/` (or `https:
 - Live local time display (Pacific timezone)
 - Responsive design
 - Gradient background matching original design
+- Markdown blog with syntax highlighting
+
+## Blog
+
+### Writing a Post
+
+Create a new `.md` file in `content/posts/` with YAML frontmatter:
+
+```markdown
+---
+title: "My Post Title"
+date: 2025-03-15
+description: "A short description for the listing page."
+---
+
+Your markdown content here...
+```
+
+### Building Locally
+
+```bash
+go build -o generate ./cmd/generate && ./generate
+```
+
+This generates the static site in `dist/`.
+
+### Previewing
+
+```bash
+python3 -m http.server 8000 -d dist
+```
+
+Then visit `http://localhost:8000`
+
+### Deployment
+
+Push to `main` and GitHub Actions will automatically build and deploy.
+
+**Note:** GitHub Pages source must be set to "GitHub Actions" in repo Settings → Pages.
