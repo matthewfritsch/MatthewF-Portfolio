@@ -34,3 +34,20 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 10000);
+
+// Scroll reveal (progressive enhancement - content visible by default)
+const revealSections = document.querySelectorAll('.about, .contact');
+if (revealSections.length > 0 && 'IntersectionObserver' in window) {
+    revealSections.forEach(el => el.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealSections.forEach(el => revealObserver.observe(el));
+}
