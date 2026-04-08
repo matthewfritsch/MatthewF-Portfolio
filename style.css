@@ -253,6 +253,7 @@ main {
 .badge.covariant { background: #f2a0a0; color: white; }
 .badge.peanut { background: #2bc4c4; color: white; }
 .badge.claudehopper { background: #d97706; color: #1a1a1a; }
+.badge.stuffshed { background: #8b7046; color: #faf6f2; text-decoration: none; }
 .badge.llmnet { background: #0891b2; color: white; }
 .badge.homelab { background: #7c3aed; color: #1a1a1a; }
 .badge.mechanic { background: #64748b; color: #fbbf24; }
